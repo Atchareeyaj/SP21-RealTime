@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>
+		21 Grams Memory
+	</title>
+
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<link type="text/css" rel="stylesheet" href="style.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js" integrity="sha512-oFOCo2/3DtjrJG4N27BjSLQWoiBv171sK6a+JiWjp/7agxC2nCUP358AqzxkBUb5jX8g6CYLPdSKQTbC0weCwA==" crossorigin="anonymous"></script>
+
+	<!-- <script src="js/libs/three.min.js"></script> -->
+	<script src="js/libs/three.min.118.js"></script>
+	<script src="js/libs/playerControls.js"></script>
+	<script src="js/libs/OrbitControls.js"></script>
+	<script src="js/libs/CSS3DRenderer.js"></script>
+
+
+	<script src="js/environment.js"></script>
+	<script src="js/scene.js"></script>
+	<script src="js/index.js"></script>
+	
+
+	<script src="http://code.jquery.com/jquery-1.5.js"></script>
+    <script>
+          function countChar(val) {
+            var len = val.value.length;
+            var max = 100;
+            if (len >= max) {
+              val.value = val.value.substring(0, max);
+            } else {
+              $('#charNum').text(max - len);
+            }
+          }
+	</script>
+
+
+</head>
+
+<body>
+	<!-- WebGL context -->
+	<div id="canvas-container"></div>
+	
+	<!-- intro Form -->
+
+	<div class="container">
+		<header>21 Grams Moment</header>
+		<div class="form-outer">
+			<form id ="form">
+
+				<!-- intro page1 -->
+				<div class="page slide-page">
+					<div class="title">  </div>
+					<div class="field">
+						<div class="text">
+							<h3>Welcome to the departure to the afterlife</h3>
+						<p>If today is your last day...Are you ready to go?</p>
+						</div>
+					</div>
+					<div class="field btns ">
+						<button autofocus class="firstNext next">Next</button>
+					</div>
+				</div>
+
+				<!-- intro page2 -->
+				<div class="page">
+					<div class="title"> </div>
+					<div class="field">
+						<div class="text">
+							<h3>At the moment of death</h3>
+							<p>Your body will lose 21 grams in weight</p>
+							<p>It might be a soul departs from your body</p>
+						</div>
+					</div>
+					<div class="field btns">
+						<button class="prev-1 prev">Back</button>
+						<button class="next-1 next">Next</button>
+					</div>
+				</div>
+
+				<!-- intro page3 -->
+				<div class="page">
+					<div class="title"> </div>
+					<div class="field">
+						<div class="text">
+							<h3>Here...</h3>
+							<p>at the entrance to the afterlife</p>
+							<p>You are asked to encapsulate one moment or memory into your soul</p>
+							<p>This chosen moment will happen again someday in your next life</p>
+							<br>
+							<p>Hit "Next" When you ready to start the process</p>
+						</div>
+					</div>
+					<div class="field btns">
+						<button class="prev-2 prev">Back</button>
+						<button class="next-2 next">Next</button>
+					</div>
+				</div>
+				
+				<!-- form page1 -->
+				<div class="page">
+					<div class="title">First...</div>
+					<div class="field">
+						<div class="label">Birth date of your soul</div>
+						<input type="date" id="bd">
+					</div>
+					<div class="field btns">
+						<button class="prev-3 prev">Back</button>
+						<button class="next-3 next">Next</button>
+					</div>
+				</div>
+				
+				<!-- form page2 -->
+				<div class="page">
+					<div class="title">Your Chosen Moment</div>
+					<div class="field">
+						<div class="label"> </div>
+						<!-- <input type="text"> -->
+						<textarea class ="msg" id="msg" name="msg" maxlength="210" rows="10" cols="50" placeholder="Start Typin..." autofocus onkeyup="countChar(this)"></textarea>
+						<br><br>
+                		<span id="charNum">210</span>
+					</div>
+					<div class="field btns">
+						<button class="prev-4 prev">Back</button>
+						<button class="next-4 next">Next</button>
+					</div>
+				</div>
+				
+				<!-- form page3 -->
+				<div class="page">
+					<div class="title">Color of your Moment </div>
+					<div class="field">
+						<input type="color" id="col" value="#e66465">
+					</div>
+					<div class="field btns">
+						<button class="prev-5 prev">Back</button>
+						<button type="submit" id="submit"class="submit">Visit the Afterlife</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+		<!-- intro slider -->
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<script src="js/introForm.js"></script>
+</body>
+
+</html>
